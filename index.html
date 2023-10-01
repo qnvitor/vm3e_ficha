@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ficha VME-3</title>
+    <link rel="stylesheet" href="estilos.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@700&display=swap">
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&display=swap" rel="stylesheet">
+
+</head>
+<body>
+    <h1>Ficha Vm</h1>
+    <!-- Adicionando uma linha horizontal -->
+<hr>
+
+
+
+<div class="container">
+    <div class="lista">
+        <table>
+            <tr>
+             <td><form>
+                 <label for="texto">nome</label><br>
+                 <textarea id="texto" name="texto" rows="1" cols="40"></textarea>
+               </form></td>
+               <!--O id é um identificador único para a área de texto.
+     O name é o nome do campo que será enviado quando o formulário for submetido.
+     rows define o número de linhas de texto visíveis na área.
+     cols define o número de colunas de texto visíveis na área.-->
+            </tr> 
+             <tr>
+                 <td><form>
+                     <label for="texto">jogador </label><br>
+                     <textarea id="texto" name="texto" rows="1" cols="40"></textarea>
+                   </form></td> 
+             </tr>
+             <tr>
+                 <td><form>
+                     <label for="texto">cronica</label><br>
+                     <textarea id="texto" name="texto" rows="1" cols="40"></textarea>
+                   </form></td>
+             </tr>
+             </table>
+     
+    </div>
+  
+    <div class="lista">
+      <table>
+        <tr>
+        <td><form>
+            <label for="texto">Natureza</label><br>
+            <textarea id="texto" name="texto" rows="1" cols="40"></textarea>
+          </form></td>
+        </tr>
+
+
+        <tr>
+        <td><form>
+            <label for="texto">Comportamento</label><br>
+            <textarea id="texto" name="texto" rows="1" cols="40"></textarea>
+          </form></td>
+        </tr>
+
+        <tr>
+        <td><button onclick="mostrarEscolhas()">Clã</button>
+
+        <div id="escolhas" style="display: none;">
+        <label><input type="radio" name="opcao" value="Ventrue">Ventrue</label><br>
+        <label><input type="radio" name="opcao" value="Malkavian">Malkavian</label><br>
+        <label><input type="radio" name="opcao" value="Nosferatu">Nosferatu</label><br>
+        <label><input type="radio" name="opcao" value="Toreador">Toreador</label><br>
+        <label><input type="radio" name="opcao" value="Tremere">Tremere</label><br>
+        <label><input type="radio" name="opcao" value="Brujah">Brujah</label><br>
+        <label><input type="radio" name="opcao" value="Gangrel">Gangrel</label><br>
+        </div>
+
+        <button onclick="obterSelecao()">escolha o Clã</button>
+    <div id="resultado"></div>
+
+        </td>
+        </tr>
+    </table>
+    </div>
+  
+
+
+
+
+
+    <div class="lista">
+      <table>
+        <tr>
+        <td><form>
+            <label for="texto">geração</label><br>
+            <textarea id="texto" name="texto" rows="1" cols="40"></textarea>
+          </form></td>
+    </tr>
+
+    <tr>
+        <td><form>
+            <label for="texto">refugio</label><br>
+            <textarea id="texto" name="texto" rows="1" cols="40"></textarea>
+          </form></td>
+    </tr>
+
+    <tr>
+        <td><form>
+            <label for="texto">conceito</label><br>
+            <textarea id="texto" name="texto" rows="1" cols="40"></textarea>
+          </form></td>
+          
+    </tr> </table>
+    </div>
+  </div>
+
+    <!-- Adicionando uma linha horizontal -->
+<hr>
+
+<h1>Atributos</h1>
+
+<div class="container">
+    <div class="lista">
+        <p><strong>Fisicos</strong></p>
+        <!-- strong para negrito-->
+        <table>
+            <!--Força-->
+            <tr>
+                <td ><span class="tooltip-trigger" onclick="showTooltip()">Força</span>
+                </td>
+                <td class="bolinha" id="bolinha1"></td>
+            <td class="bolinha" id="bolinha2"></td>
+            <td class="bolinha" id="bolinha3"></td>
+            <td class="bolinha" id="bolinha4"></td>
+            <td class="bolinha" id="bolinha5"></td>
+            
+            </tr>
+            <div class="tooltip" id="tooltip">
+                <ul>
+                <li> Fraco: Você pode levantar 20 kg.</li>
+                <li> • Médio: Você pode levantar 50 kg.</li>
+                <li> • • Bom: Você pode levantar 125 kg.</li>
+                <li> • • • Excepcional: Você pode levantar 200 kg.</li>
+                <li> • • • • Extraordinário: Você pode levantar 325 kg e esmagar crânios 
+                    como uvas.</li>
+            </ul>
+        </div>
+            <tr>
+        
+                <!--Destreza-->
+                <td><span class="tooltip-trigger" onclick="showTooltip01()">Destreza</span>
+                </td>
+                <td class="bolinha" id="bolinha01"></td>
+            <td class="bolinha" id="bolinha02"></td>
+            <td class="bolinha" id="bolinha03"></td>
+            <td class="bolinha" id="bolinha04"></td>
+            <td class="bolinha" id="bolinha05"></td>
+            
+            </tr>
+        
+            <div class="tooltip" id="tooltip01">
+                <ul>
+                    <li> Fraco: Você é desajeitado e deselegante. Abaixe essa arma 
+                        antes que você se machuque.</li>
+                    <li> • Médio: Você não é nenhum estúpido, mas também não é 
+                        um bailarino.</li>
+                    <li> • • Bom: Você possui algum potencial atlético.</li>
+                    <li> • • • Excepcional: Você poderia ser um acrobata se quisesse.</li>
+                    <li> • • • • Extraordinário: Seus movimentos são fluidos e hipnóticos 
+                        — quase sobrenaturais.</li>
+                </ul>
+                </div>
+        
+            <tr>
+                <!--Vigor-->
+        
+                <td><span class="tooltip-trigger" onclick="showTooltip02()">Vigor</span>
+                </td>
+                <td class="bolinha" id="bolinha001"></td>
+            <td class="bolinha" id="bolinha002"></td>
+            <td class="bolinha" id="bolinha003"></td>
+            <td class="bolinha" id="bolinha004"></td>
+            <td class="bolinha" id="bolinha005"></td>
+            
+            </tr>
+            <div class="tooltip" id="tooltip02">
+        
+                <ul>
+                    <li> Fraco: Você se machuca com um vento forte.</li>
+                    <li> • Médio: Você tem saúde mediana e aguenta um soco ou 
+                        dois.</li>
+                    <li> • • Bom: Você está em boa forma e raramente fica doente.</li>
+                    <li> • • • Excepcional: Você pode correr — e talvez vencer — em 
+                        qualquer maratona que escolher.</li>
+                    <li> • • • • Extraordinário: Você possui a constituição de um verdadeiro Hércules.</li>
+                </ul>
+                
+               </div>
+        
+           
+        </table>
+    </div>
+  
+    <div class="lista">
+        <p><strong>Sociais</strong></p>
+ 
+        <table>
+            <!--Carisma-->
+            <tr>
+                <td ><span class="tooltip-trigger" onclick="showTooltip03()">Carisma</span>
+                </td>
+                <td class="bolinha" id="Carisma1"></td>
+            <td class="bolinha" id="Carisma2"></td>
+            <td class="bolinha" id="Carisma3"></td>
+            <td class="bolinha" id="Carisma4"></td>
+            <td class="bolinha" id="Carisma5"></td>
+            
+            </tr>
+            <div class="tooltip" id="tooltip03">
+                <ul>
+                <li> Fraco: Pare de cutucar o nariz.</li>
+                <li> • Médio: Você é razoavelmente agradável e 
+                    tem muitos amigos.</li>
+                <li> • • Bom: As pessoas confiam implicitamente em você.</li>
+                <li> • • • Excepcional: Você tem um magnetismo pessoal 
+                    significativo.</li>
+                <li> • • • • Extraordinário: Culturas inteiras poderiam seguir
+                    a sua liderança. </li>
+            </ul>
+        </div>
+        <!--manipulação-->
+        <tr>
+            <td ><span class="tooltip-trigger" onclick="showTooltip04()">manipulação</span>
+            </td>
+            <td class="bolinha" id="manipulação1"></td>
+        <td class="bolinha" id="manipulação2"></td>
+        <td class="bolinha" id="manipulação3"></td>
+        <td class="bolinha" id="manipulação4"></td>
+        <td class="bolinha" id="manipulação5"></td>
+        
+        </tr>
+        <div class="tooltip" id="tooltip04">
+            <ul>
+            <li> Fraco: Uma pessoa de poucas (e frequentemente inefici 
+                entes) palavras.</li>
+            <li> • Médio: Você consegue enganar algumas pessoas, algu 
+                mas vezes, como qualquer outra pessoa.</li>
+            <li> • • Bom: Você nunca paga o preço integral
+                .</li>
+            <li> • • • Excepcional: Você poderia ser um político ou o líder de 
+                um culto.</li>
+            <li> • • • • Extraordinário: "E claro que eu vou dizer ao príncipe que fui 
+                eu quem tentou fincar a estaca!"</li>
+                
+        </ul>
+        
+        <!--APARÊNCIA-->
+        <tr>
+            <td ><span class="tooltip-trigger" onclick="showTooltip05()">APARÊNCIA</span>
+            </td>
+            <td class="bolinha" id="APARÊNCIA1"></td>
+        <td class="bolinha" id="APARÊNCIA2"></td>
+        <td class="bolinha" id="APARÊNCIA3"></td>
+        <td class="bolinha" id="APARÊNCIA4"></td>
+        <td class="bolinha" id="APARÊNCIA5"></td>
+        
+        </tr>
+        <div class="tooltip" id="tooltip05">
+            <ul>
+            <li> Fraco: Feio como um macaco</li>
+            <li>  • Médio: Você não se destaca na multidão, nem para me 
+                lhor e nem para pior.
+                </li>
+            <li> • • Bom: Estranhos se oferecem para lhe pagar uma bebida</li>
+            <li> • • • Excepcional: Você é atraente o suficiente para ser um 
+                modelo e as pessoas fteqüentemente lhe dizem isso.</li>
+            <li> • • • • Extraordinário: Você causa tanto ciúmes insanos como 
+                reverências beatas.</li>
+                
+        </ul>
+        </div>
+        </table>
+    </div>
+  
+    <div class="lista">
+        <p><strong>Mentais</strong></p>
+        <table>
+        <!--PERCEPÇÃO-->
+            <tr>
+                <td ><span class="tooltip-trigger" onclick="showTooltip06()">PERCEPÇÃO</span>
+                </td>
+                <td class="bolinha" id="PERCEPÇÃO1"></td>
+            <td class="bolinha" id="PERCEPÇÃO2"></td>
+            <td class="bolinha" id="PERCEPÇÃO3"></td>
+            <td class="bolinha" id="PERCEPÇÃO4"></td>
+            <td class="bolinha" id="PERCEPÇÃO5"></td>
+            
+            </tr>
+            <div class="tooltip" id="tooltip06">
+                <ul>
+                <li> Fraco: Talvez você seja absurdamente distraído, talvez 
+                    meramente um cabeça-de-vento; de qualquer modo, até 
+                    mesmo os detalhes mais óbvios o enganam.</li>
+                <li>  • Médio: Você desconhece os detalhes, mas está ciente do 
+                    todo.</li>
+                <li> • • Bom: Você distingue temperamentos, texturas e pequenas 
+                    mudanças no ambiente</li>
+                <li> • • • Excepcional: Praticamente nada lhe passa desapercebido.</li>
+                <li> • • • • Extraordinário: Você observa instantaneamente coisas que 
+                    são quase imperceptíveis aos sentidos humanos.</li>
+            </ul>
+        </div>
+        <!--INTELIGÊNCIA-->
+        <tr>
+            <td ><span class="tooltip-trigger" onclick="showTooltip07()">INTELIGÊNCIA</span>
+            </td>
+            <td class="bolinha" id="INTELIGÊNCIA1"></td>
+        <td class="bolinha" id="INTELIGÊNCIA2"></td>
+        <td class="bolinha" id="INTELIGÊNCIA3"></td>
+        <td class="bolinha" id="INTELIGÊNCIA4"></td>
+        <td class="bolinha" id="INTELIGÊNCIA5"></td>
+        
+        </tr>
+        <div class="tooltip" id="tooltip07">
+            <ul>
+            <li> Fraco: Não é a faca mais afiada da gaveta (QI 80).</li>
+            <li> • Médio: Esperto o suficiente para perceber que é normal 
+                (QI 100).</li>
+            <li> • • Bom: Mais esclarecido que as massas (QI 120).</li>
+            <li> • • • Excepcional: Você não é apenas brilhante, você é absolutamente brilhante (QI 140).</li>
+            <li> • • • • Extraordinário: Um verdadeiro génio (QI 160)</li>
+        </ul>
+        </div>
+        
+        <!--RACIOCÍNIO-->
+        <tr>
+            <td ><span class="tooltip-trigger" onclick="showTooltip08()">RACIOCÍNIO</span>
+            </td>
+            <td class="bolinha" id="RACIOCÍNIO1"></td>
+        <td class="bolinha" id="RACIOCÍNIO2"></td>
+        <td class="bolinha" id="RACIOCÍNIO3"></td>
+        <td class="bolinha" id="RACIOCÍNIO4"></td>
+        <td class="bolinha" id="RACIOCÍNIO5"></td>
+        
+        </tr>
+        <div class="tooltip" id="tooltip08">
+            <ul>
+            <li> Fraco: Puxe meu dedo.</li>
+            <li> • Médio: Você sabe quando apostar e quando passar no 
+                pôquer.</li>
+            <li> • • Bom: Você raramente é pego de surpresa ou fica serm 
+                palavras.</li>
+            <li> • • • Excepcional: Você é uma daquelas pessoas que fazem os 
+                outros pensar, "ooh, eu deveria ter dito isso ..." no dia 
+                seguinte.</li>
+            <li> • • • • Extraordinário: Você pensa e responde quase tão velozmente quanto é capaz de agir</li>
+        </ul>
+        </div>
+        </table>
+    </div>
+</div>
+
+<hr>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<script src="java.js"></script>
+
+</body>
+</html>
