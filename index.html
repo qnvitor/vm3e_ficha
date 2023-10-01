@@ -48,18 +48,87 @@
     <div class="lista">
       <table>
         <tr>
-        <td><form>
-            <label for="texto">Natureza</label><br>
-            <textarea id="texto" name="texto" rows="1" cols="40"></textarea>
-          </form></td>
+        <td><button onclick="mostrarEscolhas02()">natureza</button>
+
+            <div id="escolhas02" style="display: none;">
+            <label><input type="radio" name="opcao02" value="Excêntrico">Excêntrico: Você existe apenas para o seu próprio prazer.</label><br>
+            <label><input type="radio" name="opcao02" value="Arquiteto">Arquiteto: Você constrói um futuro melhor.</label><br>
+            <label><input type="radio" name="opcao02" value="Autocrata">Autocrata: Você precisa controlar.</label><br>
+            <label><input type="radio" name="opcao02" value="Bon Vivant">Bon Vivant: A não-vida é para ser vivida.</label><br>
+            <label><input type="radio" name="opcao02" value="Caçador de Emoções">Caçador de Emoções: A emoção é tudo o que importa.</label><br>
+            <label><input type="radio" name="opcao02" value="Celebrante">Celebrante: Você existe para sua paixão.</label><br>
+            <label><input type="radio" name="opcao02" value="Conformista">Conformista: Você segue e assiste.</label><br>
+            <label><input type="radio" name="opcao02" value="Criança">Criança: Quem estará lá para ajudá-lo?</label><br>
+            <label><input type="radio" name="opcao02" value="Diretor">Diretor: Você supervisiona o que tem que ser feito.</label><br>
+            <label><input type="radio" name="opcao02" value="Durão">Durão: Aqueles que podem, vencem. Aqueles que não podem, perdem. Você pode.</label><br>
+            <label><input type="radio" name="opcao02" value="Esperto">Esperto: Os outros existem para o seu benefício.</label><br>
+            <label><input type="radio" name="opcao02" value="Fanático">Fanático: A causa é tudo o que importa.</label><br>
+            <label><input type="radio" name="opcao02" value="Filantropo">Filantropo: Todos precisam ser nutridos.</label><br>
+            <label><input type="radio" name="opcao02" value="Galante">Galante: Você não assiste o espetáculo, você é o próprio espetáculo!</label><br>
+            <label><input type="radio" name="opcao02" value="Gozador">Gozador: Os risos obscurecem a dor.</label><br>
+            <label><input type="radio" name="opcao02" value="Juiz">Juiz: A verdade está lá fora.</label><br>
+            <label><input type="radio" name="opcao02" value="Mártir">Mártir: Você sofre pelo bem maior.</label><br>
+            <label><input type="radio" name="opcao02" value="Masoquista">Masoquista: Você testa seus limites todas as noites.</label><br>
+            <label><input type="radio" name="opcao02" value="Masoquista">Masoquista: Você testa seus limites todas as noites.</label><br>
+            <label><input type="radio" name="opcao02" value="Pedagogo">Pedagogo: Você salva os outros através do conhecimento.</label><br>
+            <label><input type="radio" name="opcao02" value="Penitente">Penitente: A não-vida é uma maldição com a qual se acostumar</label><br>
+            <label><input type="radio" name="opcao02" value="Perfeccionista">Perfeccionista: Nada está bom o suficiente.</label><br>
+            <label><input type="radio" name="opcao02" value="Ranzinza">Ranzinza: Nada vale a pena.</label><br>
+            <label><input type="radio" name="opcao02" value="Rebelde">Rebelde: Você não segue a liderança de ninguém.</label><br>
+            <label><input type="radio" name="opcao02" value="Sobrevivente">Sobrevivente: Nada pode te manter caído.</label><br>    
+            <label><input type="radio" name="opcao02" value="Solitário">Solitário: Você traça o seu próprio caminho.</label><br> 
+            <label><input type="radio" name="opcao02" value="Tradicionalista">Tradicionalista: Como sempre tem sido, assim deve ser.</label><br> 
+            <label><input type="radio" name="opcao02" value="Valentão">Valentão: Força é tudo que importa.</label><br> 
+            <label><input type="radio" name="opcao02" value="Visionário">Visionário: Existe algo por trás de tudo isso.</label><br> 
+            </div>
+    
+            <button onclick="obterSelecao02()">escolha a natureza</button>
+        <div id="resultado02"></div></td>
         </tr>
 
 
+
+
+
+        
         <tr>
-        <td><form>
-            <label for="texto">Comportamento</label><br>
-            <textarea id="texto" name="texto" rows="1" cols="40"></textarea>
-          </form></td>
+        <td><button onclick="mostrarEscolhas01()">Comportamento</button>
+
+            <div id="escolhas01" style="display: none;">
+            <label><input type="radio" name="opcao01" value="Excêntrico">Excêntrico: Você existe apenas para o seu próprio prazer.</label><br>
+            <label><input type="radio" name="opcao01" value="Arquiteto">Arquiteto: Você constrói um futuro melhor.</label><br>
+            <label><input type="radio" name="opcao01" value="Autocrata">Autocrata: Você precisa controlar.</label><br>
+            <label><input type="radio" name="opcao01" value="Bon Vivant">Bon Vivant: A não-vida é para ser vivida.</label><br>
+            <label><input type="radio" name="opcao01" value="Caçador de Emoções">Caçador de Emoções: A emoção é tudo o que importa.</label><br>
+            <label><input type="radio" name="opcao01" value="Celebrante">Celebrante: Você existe para sua paixão.</label><br>
+            <label><input type="radio" name="opcao01" value="Conformista">Conformista: Você segue e assiste.</label><br>
+            <label><input type="radio" name="opcao01" value="Criança">Criança: Quem estará lá para ajudá-lo?</label><br>
+            <label><input type="radio" name="opcao01" value="Diretor">Diretor: Você supervisiona o que tem que ser feito.</label><br>
+            <label><input type="radio" name="opcao01" value="Durão">Durão: Aqueles que podem, vencem. Aqueles que não podem, perdem. Você pode.</label><br>
+            <label><input type="radio" name="opcao01" value="Esperto">Esperto: Os outros existem para o seu benefício.</label><br>
+            <label><input type="radio" name="opcao01" value="Fanático">Fanático: A causa é tudo o que importa.</label><br>
+            <label><input type="radio" name="opcao01" value="Filantropo">Filantropo: Todos precisam ser nutridos.</label><br>
+            <label><input type="radio" name="opcao01" value="Galante">Galante: Você não assiste o espetáculo, você é o próprio espetáculo!</label><br>
+            <label><input type="radio" name="opcao01" value="Gozador">Gozador: Os risos obscurecem a dor.</label><br>
+            <label><input type="radio" name="opcao01" value="Juiz">Juiz: A verdade está lá fora.</label><br>
+            <label><input type="radio" name="opcao01" value="Mártir">Mártir: Você sofre pelo bem maior.</label><br>
+            <label><input type="radio" name="opcao01" value="Masoquista">Masoquista: Você testa seus limites todas as noites.</label><br>
+            <label><input type="radio" name="opcao01" value="Masoquista">Masoquista: Você testa seus limites todas as noites.</label><br>
+            <label><input type="radio" name="opcao01" value="Pedagogo">Pedagogo: Você salva os outros através do conhecimento.</label><br>
+            <label><input type="radio" name="opcao01" value="Penitente">Penitente: A não-vida é uma maldição com a qual se acostumar</label><br>
+            <label><input type="radio" name="opcao01" value="Perfeccionista">Perfeccionista: Nada está bom o suficiente.</label><br>
+            <label><input type="radio" name="opcao01" value="Ranzinza">Ranzinza: Nada vale a pena.</label><br>
+            <label><input type="radio" name="opcao01" value="Rebelde">Rebelde: Você não segue a liderança de ninguém.</label><br>
+            <label><input type="radio" name="opcao01" value="Sobrevivente">Sobrevivente: Nada pode te manter caído.</label><br>    
+            <label><input type="radio" name="opcao01" value="Solitário">Solitário: Você traça o seu próprio caminho.</label><br> 
+            <label><input type="radio" name="opcao01" value="Tradicionalista">Tradicionalista: Como sempre tem sido, assim deve ser.</label><br> 
+            <label><input type="radio" name="opcao01" value="Valentão">Valentão: Força é tudo que importa.</label><br> 
+            <label><input type="radio" name="opcao01" value="Visionário">Visionário: Existe algo por trás de tudo isso.</label><br> 
+            </div>
+    
+            <button onclick="obterSelecao01()">escolha a natureza</button>
+        <div id="resultado01"></div>
+    </td>
         </tr>
 
         <tr>
