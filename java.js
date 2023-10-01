@@ -419,3 +419,79 @@ document.getElementById('RACIOCÍNIO5').addEventListener('click', function() {
   toggleBolinha('RACIOCÍNIO2');
   toggleBolinha('RACIOCÍNIO1');
 });
+
+//Prontidão
+
+function showTooltip09() {
+  const tooltip = document.getElementById('tooltip09');
+  if (tooltip.classList.contains('show')) {
+      tooltip.classList.remove('show');
+    } else {
+      tooltip.classList.add('show');
+    }
+  
+}
+
+document.getElementById('prontidao1').addEventListener('click', function() {
+  toggleBolinha('prontidao1');
+});
+document.getElementById('prontidao2').addEventListener('click', function() {
+  toggleBolinha('prontidao2');
+  toggleBolinha('prontidao1');
+});
+document.getElementById('prontidao3').addEventListener('click', function() {
+  toggleBolinha('prontidao3');
+  toggleBolinha('prontidao2');
+  toggleBolinha('prontidao1');
+});
+document.getElementById('prontidao4').addEventListener('click', function() {
+  toggleBolinha('prontidao4');
+  toggleBolinha('prontidao3');
+  toggleBolinha('prontidao2');
+  toggleBolinha('prontida1');
+});
+document.getElementById('prontidao5').addEventListener('click', function() {
+  toggleBolinha('prontidao5');
+  toggleBolinha('prontidao4');
+  toggleBolinha('prontidao3');
+  toggleBolinha('prontidao2');
+  toggleBolinha('prontidao1');
+});
+
+//Prontidão
+
+function showTooltip10() {
+  const tooltip = document.getElementById('tooltip10');
+  if (tooltip.classList.contains('show')) {
+      tooltip.classList.remove('show');
+    } else {
+      tooltip.classList.add('show');
+    }
+  
+}
+
+document.getElementById('esportes1').addEventListener('click', function() {
+  toggleBolinha('esportes1');
+});
+document.getElementById('esportes2').addEventListener('click', function() {
+  toggleBolinha('esportes2');
+  toggleBolinha('esportes1');
+});
+document.getElementById('esportes3').addEventListener('click', function() {
+  toggleBolinha('esportes3');
+  toggleBolinha('esportes2');
+  toggleBolinha('esportes1');
+});
+document.getElementById('esportes4').addEventListener('click', function() {
+  toggleBolinha('esportes4');
+  toggleBolinha('esportes3');
+  toggleBolinha('esportes2');
+  toggleBolinha('esportes1');
+});
+document.getElementById('esportes5').addEventListener('click', function() {
+  toggleBolinha('esportes5');
+  toggleBolinha('esportes4');
+  toggleBolinha('esportes3');
+  toggleBolinha('esportes2');
+  toggleBolinha('esportes1');
+});
